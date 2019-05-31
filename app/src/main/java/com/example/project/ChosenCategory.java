@@ -29,32 +29,32 @@ public class ChosenCategory extends AppCompatActivity {
     public DataItemAdapter adapter;
     private ListView rv;
     private int typePos;
-    public static int deleted = -1;
     private DataProvider dataProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chosen_category);
-        chosenItem = getIntent().getStringExtra("item");
-        dataProvider = DataProvider.getInstance(this);
-        pvf = dataProvider.getPVF();
-        for (int i = 0; i < pvf.size(); i++){
-            if (pvf.get(i).getName().equals(chosenItem)){
-                typePos = i;
+        try {
+            chosenItem = getIntent().getStringExtra("item");
+            dataProvider = DataProvider.getInstance(this);
+            pvf = dataProvider.getPVF();
+            for (int i = 0; i < pvf.size(); i++) {
+                if (pvf.get(i).getName().equals(chosenItem)) {
+                    typePos = i;
+                }
             }
-        }
-        indicator = getIntent().getCharExtra("indicator", 'F');
+            indicator = getIntent().getCharExtra("indicator", 'F');
 
-        brands = DataProvider.getBrands(indicator);
-        final Context context = this;
-        adapter = new DataItemAdapter(this, brands);
-        rv = findViewById(R.id.BrandList);
-        rv.setAdapter(adapter);
-        rv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                final int pos = position;
+            brands = DataProvider.getBrands(indicator);
+            final Context context = this;
+            adapter = new DataItemAdapter(this, brands);
+            rv = findViewById(R.id.BrandList);
+            rv.setAdapter(adapter);
+            rv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    final int pos = position;
                     Intent intent = new Intent(context, ChoseFunction.class);
                     intent.putExtra("typePos", typePos);
                     intent.putExtra("brandPosition", pos);
@@ -62,9 +62,12 @@ public class ChosenCategory extends AppCompatActivity {
                     intent.putExtra("indicator", indicator);
                     startActivity(intent);
                     adapter.notifyDataSetChanged();
-            }
+                }
 
-        });
+            });
+        }catch (NullPointerException e){
+            System.out.println(e.getCause());
+        }
     }
 
     public void GoToAddingScreen(View view) {
