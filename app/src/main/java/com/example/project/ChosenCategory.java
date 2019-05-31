@@ -38,8 +38,6 @@ public class ChosenCategory extends AppCompatActivity {
         setContentView(R.layout.activity_chosen_category);
         chosenItem = getIntent().getStringExtra("item");
         dataProvider = DataProvider.getInstance(this);
-        pvf.clear();
-        brands.clear();
         pvf = dataProvider.getPVF();
         for (int i = 0; i < pvf.size(); i++){
             if (pvf.get(i).getName().equals(chosenItem)){

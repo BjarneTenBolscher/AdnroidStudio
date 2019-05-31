@@ -31,7 +31,6 @@ public class ChoseFunction extends AppCompatActivity {
 
         position = getIntent().getIntExtra("brandPosition", 5);
         typePos = getIntent().getIntExtra("typePos", 5);
-        pvf.clear();
         pvf = DataProvider.pvf;
         indicator = getIntent().getCharExtra("indicator", 'F');
         chosenItem = getIntent().getStringExtra("chosenItem");
@@ -58,9 +57,7 @@ public class ChoseFunction extends AppCompatActivity {
     }
 
     public void RemoveBrand(View view) {
-        ChosenCategory.deleted = position;
         pvf.get(position).getBrands().remove(position);
-        finish();
     }
 
     @Override
