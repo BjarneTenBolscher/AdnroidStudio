@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PVF manager</string>
+    <string name="apple">Appel</string>
+    <string name="pear">Peer</string>
+    <string name="orange">Sinaasappel</string>
+    <string name="kiwi">Kiwi</string>
+    <string name="banana">Banaan</string>
+    <string name="sweetPotato">Zoete aardappel</string>
+    <string name="normalPotato">Aardappel</string>
+    <string name="redPotato">Rode aardappel</string>
+    <string name="creamyPotato">Roomige Aardappel</string>
+    <string name="carrot">Wortel</string>
+    <string name="leek">Lente ui</string>
+    <string name="lettuce">Sla</string>
+    <string name="chicory">Witlof</string>
+    <string name="turnip">Biet</string>
+    <string name="cost">Kost per KG: $</string>
+    <string name="main_menu">Welkom bij de AGF(Aardappel, Groente en Fruit) manager</string>
+    <string name="addButton">toevoegen</string>
+    <string name="fruit">Fruit</string>
+    <string name="vegetable">Groente</string>
+    <string name="potato">Aardappel</string>
+    <string name="choose">"Kies een categorie: "</string>
+    <string name="search">Zoek</string>
+    <string name="brand">"Merk: "</string>
+    <string name="costs">"Prijs: "</string>
+    <string name="remove">Verwijderen</string>
+    <string name="clickRemove">druk op het merk dat je wil verwijderen.</string>
+    <string name="showAmount">Hoeveelheid</string>
+    <string name="confirm">Ja</string>
+    <string name="message">Weet je zeker dat je dit wil verwijderen?</string>
+    <string name="warning">WAARSCHUWING</string>
+    <string name="what">Aardappel, groente of fruit?</string>
+    <string name="edit">Veranderen</string>
+    <string name="type">Type:</string>
+</resources>

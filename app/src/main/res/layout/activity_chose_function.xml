@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoseFunction">
+
+    <Button
+    android:id="@+id/RemoveButton"
+    android:layout_width="139dp"
+    android:layout_height="88dp"
+    android:layout_marginStart="66dp"
+    android:layout_marginLeft="66dp"
+    android:layout_marginEnd="69dp"
+    android:layout_marginRight="69dp"
+    android:layout_marginBottom="100dp"
+    android:text="@string/remove"
+    android:onClick="RemoveBrand"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/EditingButton"
+    app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditingButton"
+        android:layout_width="139dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
+        android:layout_marginBottom="100dp"
+        android:text="Edit"
+        android:onClick="GoToEditingScreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/RemoveButton" />
+
+    <TextView
+        android:id="@+id/InformationView"
+        android:layout_width="237dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginRight="94dp"
+        android:layout_marginBottom="124dp"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/RemoveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

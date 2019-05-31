@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">PVF manager</string>
+
+    <string-array name="choosePVF">
+        <item>Potato</item>
+        <item>Vegetable</item>
+        <item>Fruit</item>
+    </string-array>
+
+    <string name="cost">  Costs per KG: $</string>
+
+    <string name="apple">Apple</string>
+    <string name="pear">Pear</string>
+    <string name="orange">Orange</string>
+    <string name="kiwi">Kiwi</string>
+    <string name="banana">Banana</string>
+
+    <string name="sweetPotato">sweet potato</string>
+    <string name="normalPotato">potato</string>
+    <string name="redPotato">red potato</string>
+    <string name="creamyPotato">creamy potato</string>
+
+    <string name="carrot">Carrot</string>
+    <string name="leek">Leek</string>
+    <string name="lettuce">Lettuce</string>
+    <string name="chicory">Chicory</string>
+    <string name="turnip">Turnip</string>
+
+    <string-array name="potatos">
+        <item>@string/sweetPotato</item>
+        <item>@string/normalPotato</item>
+        <item>@string/redPotato</item>
+        <item>@string/creamyPotato</item>
+    </string-array>
+
+    <string-array name="fruits">
+        <item>@string/apple</item>
+        <item>@string/pear</item>
+        <item>@string/orange</item>
+        <item>@string/kiwi</item>
+        <item>@string/banana</item>
+    </string-array>
+
+    <string-array name="vegetables">
+        <item>@string/carrot</item>
+        <item>@string/leek</item>
+        <item>@string/lettuce</item>
+        <item>@string/chicory</item>
+        <item>@string/turnip</item>
+    </string-array>
+
+    <string name="main_menu">Welcome to PVF(Potato, Vegetable and Fruit) manager</string>
+
+    <string name="addButton">add</string>
+    <string name="fruit">Fruit</string>
+    <string name="vegetable">Vegetable</string>
+    <string name="potato">Potato</string>
+
+    <string name="choose">Choose a category:</string>
+    <string name="search">Search</string>
+
+    <string name="brand">Brand:</string>
+    <string name="costs">Cost:</string>
+
+    <string name="remove">remove</string>
+
+
+    <string name="clickRemove">Press the brand you want to delete and it will get deleted</string>
+
+    <string name="showAmount">Amount</string>
+
+    <string name="confirm">confirm</string>
+    <string name="message">Are you sure you wanna delete this?</string>
+    <string name="warning">WARNING</string>
+
+    <string name="what">Potato, vegetable or fruit?</string>
+    <string name="edit">edit</string>
+    <string name="type">Type:</string>
+
+</resources>
+
+
