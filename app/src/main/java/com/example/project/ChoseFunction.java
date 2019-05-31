@@ -57,7 +57,7 @@ public class ChoseFunction extends AppCompatActivity {
     }
 
     public void RemoveBrand(View view) {
-        pvf.get(position).getBrands().remove(position);
+        pvf.get(typePos).getBrands().remove(position);
     }
 
     @Override
