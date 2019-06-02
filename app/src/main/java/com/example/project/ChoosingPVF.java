@@ -32,45 +32,32 @@ public class ChoosingPVF extends AppCompatActivity {
         DataProvider dataProvider = DataProvider.getInstance(this);
         ArrayAdapter<String> adapter;
 
+        names.clear();
+        pvf = dataProvider.getPVF();
         if (rb1.isChecked()) {
-
-            names.clear();
-            pvf = dataProvider.getPVF();
             for (int i = 0; i < pvf.size(); i++) {
                 if (pvf.get(i).getIndicator() == 'F') {
                     names.add(pvf.get(i).getName());
                 }
             }
-            typeChoser = findViewById(R.id.typeSpinner);
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, names);
-            typeChoser.setAdapter(adapter);
 
         } else if (rb2.isChecked()) {
-
-            names.clear();
-            pvf = dataProvider.getPVF();
             for (int i = 0; i < pvf.size(); i++) {
                 if (pvf.get(i).getIndicator() == 'P') {
                     names.add(pvf.get(i).getName());
                 }
             }
-            typeChoser = findViewById(R.id.typeSpinner);
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, names);
-            typeChoser.setAdapter(adapter);
 
         } else if (rb3.isChecked()) {
-
-            names.clear();
-            pvf = dataProvider.getPVF();
             for (int i = 0; i < pvf.size(); i++) {
                 if (pvf.get(i).getIndicator() == 'V') {
                     names.add(pvf.get(i).getName());
                 }
             }
-            typeChoser = findViewById(R.id.typeSpinner);
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, names);
-            typeChoser.setAdapter(adapter);
         }
+        typeChoser = findViewById(R.id.typeSpinner);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, names);
+        typeChoser.setAdapter(adapter);
     }
 
 

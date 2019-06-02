@@ -21,6 +21,7 @@ public class ChoseFunction extends AppCompatActivity {
     private int position;
     private int typePos;
     private char indicator;
+    private int removed;
     public static ArrayList<PVFname> res;
     private String chosenItem;
 
@@ -35,7 +36,7 @@ public class ChoseFunction extends AppCompatActivity {
         indicator = getIntent().getCharExtra("indicator", 'F');
         chosenItem = getIntent().getStringExtra("chosenItem");
         PVFname pvFname;
-
+        removed = 0;
         for (int i = 0; i < pvf.size(); i++) {
             pvFname = pvf.get(i);
             if (pvFname.getIndicator() == indicator) {
@@ -57,7 +58,11 @@ public class ChoseFunction extends AppCompatActivity {
     }
 
     public void RemoveBrand(View view) {
-        pvf.get(typePos).getBrands().remove(position);
+        if (removed == 0) {
+            pvf.get(typePos).getBrands().remove(position);
+            finish();
+            removed++;
+        }
     }
 
     @Override

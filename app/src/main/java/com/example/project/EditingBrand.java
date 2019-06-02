@@ -1,12 +1,10 @@
 package com.example.project;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.project.Model.Brand;
 import com.example.project.Model.DataProvider;
 import com.example.project.Model.PVFname;
 
@@ -57,13 +55,16 @@ public class EditingBrand extends AppCompatActivity {
         newCost = Double.parseDouble(editCosts.getText().toString());
 
         PVFname pvFname;
+
         for (int i = 0; i < pvf.size(); i++) {
             pvFname = pvf.get(i);
             if (pvFname.getBrands().get(position).getItemName().equals(chosenItem)) {
-               pvFname.getBrands().get(position).setBrands(newName);
-               pvFname.getBrands().get(position).setCosts(newCost);
-               finish();
+                pvFname.getBrands().get(position).setBrands(newName);
+                pvFname.getBrands().get(position).setCosts(newCost);
+                finish();
+            }
         }
+
     }
-    }
+
 }
