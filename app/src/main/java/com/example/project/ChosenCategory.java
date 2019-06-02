@@ -87,6 +87,7 @@ public class ChosenCategory extends AppCompatActivity {
     @Override
     public void onActivityReenter(int resultCode, Intent data) {
         super.onActivityReenter(resultCode, data);
+        pvf.clear();
         adapter.notifyDataSetChanged();
     }
 }

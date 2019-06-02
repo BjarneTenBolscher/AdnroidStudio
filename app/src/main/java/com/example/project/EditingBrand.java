@@ -2,6 +2,7 @@ package com.example.project;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,17 +18,17 @@ public class EditingBrand extends AppCompatActivity {
     private TextView editCosts;
     private String newName;
     private Double newCost;
+    private int position;
+    private String chosenItem;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editing_brand);
-        int position = getIntent().getIntExtra("brandPosition", 5);
-        String chosenItem = getIntent().getStringExtra("chosenItem");
-        DataProvider dataProvider = new DataProvider(this);
-        pvf.clear();
-        pvf = dataProvider.getPVF();
+        position = getIntent().getIntExtra("brandPosition", 5);
+        chosenItem = getIntent().getStringExtra("chosenItem");
+        pvf = DataProvider.pvf;
 
 
         editCosts = findViewById(R.id.editCosts);
@@ -38,10 +39,10 @@ public class EditingBrand extends AppCompatActivity {
         for (int i = 0; i < pvf.size(); i++) {
             pvFname = pvf.get(i);
 
-            if (pvFname.getBrands().get(position)
-                    .getItemName().equals(chosenItem)) {
+            if (pvFname.getBrands().get(position).getItemName().equals(chosenItem)) {
                 editCosts.setText(Double.toString(pvFname.getBrands().get(position).getCosts()));
                 editName.setText(pvFname.getBrands().get(position).getItemName());
+                break;
             }
         }
 

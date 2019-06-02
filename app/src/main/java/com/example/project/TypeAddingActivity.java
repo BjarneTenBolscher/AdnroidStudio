@@ -24,18 +24,18 @@ public class TypeAddingActivity extends AppCompatActivity {
         pvfType = findViewById(R.id.WhatPVF);
         name = typeView.getText().toString();
         pvf = pvfType.getText().toString();
-
-        if (!name.equals("") || !pvf.equals("")) {
-            pvf.toUpperCase();
-            if (pvf.equals(this.getResources().getString(R.string.vegetable))) {
-                pvf = "Vegetable";
-            } else if (pvf.equals(this.getResources().getString(R.string.fruit))) {
-                pvf = "Fruit";
-            } else {
-                pvf = "Potato";
+        char pvfChar = pvf.toLowerCase().charAt(0);
+            if (!name.equals("")) {
+                pvf.toUpperCase();
+                if (pvf.equals(this.getResources().getString(R.string.vegetable)) || pvfChar == 'v') {
+                    pvf = "Vegetable";
+                } else if (pvf.equals(this.getResources().getString(R.string.fruit)) || pvfChar == 'f') {
+                    pvf = "Fruit";
+                } else {
+                    pvf = "Potato";
+                }
+                DataProvider.addType(name, pvf);
+                finish();
             }
-            DataProvider.addType(name, pvf);
-            finish();
-        }
     }
 }
